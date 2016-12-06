@@ -1,0 +1,14 @@
+//response to the request 4 start an app
+{
+  "VTWCONTROL" : [
+    { "RESPONSE" : "START" },
+    { "ID" : "app_id" },
+    { "IP" : "data_ip" },
+    { "PORT" : "data_port" },
+    { "URI" : "data_uri" },
+    { "OPTIONS" : [
+      { "OPT" : "opt" },
+      { "OPT1" : "opt1" }
+    ]}
+  ]
+}

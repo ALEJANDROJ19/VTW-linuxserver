@@ -1,0 +1,12 @@
+//3 + enviem les app disponibles al mobil i el servidor ens retorna els canvis pertinents
+{
+  "VTWCONTROL" : [
+    { "REQUEST" : "APP-UPDATE" },
+    { "APP" : "app_id" },
+    { "APP" : "app_id" },
+    { "APP" : "app_id" },
+    { "APP" : "app_id" },
+    { "APP" : "app_id" },
+    { "APP" : "..." }
+  ]
+}

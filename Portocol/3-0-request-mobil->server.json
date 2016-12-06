@@ -1,0 +1,6 @@
+//client mobil fa un request de totes les app disponibles al servidor
+{
+  "VTWCONTROL" : [
+    { "REQUEST" : "APP-REQUEST" }
+  ]
+}

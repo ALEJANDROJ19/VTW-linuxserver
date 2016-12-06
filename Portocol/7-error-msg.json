@@ -1,0 +1,9 @@
+//error message server or mobile
+{
+  "VTWCONTROL" : [
+    { "ERROR" : "error_code" },
+    { "MESSAGE" : [
+      { "msg" : "the message that caused the error" }
+    ]}
+  ]
+}

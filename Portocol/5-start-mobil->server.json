@@ -1,0 +1,11 @@
+//request to start an app
+{
+  "VTWCONTROL" : [
+    { "REQUEST" : "START" },
+    { "ID" : "app_id" },
+    { "OPTIONS" : [
+      { "OPT" : "opt" },
+      { "OPT1" : "opt1" }
+    ]}
+  ]
+}

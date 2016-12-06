@@ -1,0 +1,18 @@
+//3 + enviem les app disponibles al mobil i el servidor ens retorna els canvis pertinents
+{
+  "VTWCONTROL" : [
+    { "RESPONSE" : "APP-LIST" },
+    { "APP-LIST" : [
+      { "ID" : "app_id" },
+      { "THUMBNAIL" : "bytes" },
+      { "ID" : "app_id" },
+      { "THUMBNAIL" : "bytes" },
+      { "ID" : "app_id" },
+      { "THUMBNAIL" : "bytes" },
+      { "ID" : "app_id" },
+      { "THUMBNAIL" : "bytes" },
+      { "ID" : "app_id" },
+      { "THUMBNAIL" : "bytes" }
+    ]}
+  ]
+}

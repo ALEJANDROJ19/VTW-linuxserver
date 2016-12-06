@@ -1,0 +1,8 @@
+//missatge de resposta del server
+{
+  "VTWCONTROL" : [
+    { "RESPONSE" : "OK" },
+    { "IP" : "server_ip" },
+    { "PORT" : "data_port"}
+  ]
+}

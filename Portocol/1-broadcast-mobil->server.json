@@ -1,0 +1,6 @@
+//missatge inicial del mobil al broadcast de la subxarxa contra el port de control n
+{
+  "VTWCONTROL" : [
+    { "REQUEST" : "DISCOVERY" }
+  ]
+}
