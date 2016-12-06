@@ -1,0 +1,23 @@
+#pragma once
+class controller
+{
+	private:
+		int type;
+		CoordinatesXY _last_pos;
+		bool _is_last;
+		Display *dpy;
+		Window root_window;
+	
+	public:
+
+		explicit controller(int, CoordinatesXY);	
+		controller(const controller&);
+		controller& operator=(const controller&);
+		~controller();
+		
+		//class methods 
+		void moveAbs(const CoordinatesXY &);
+		void move(const CoordinatesXY &);
+		
+};
+
