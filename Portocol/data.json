@@ -1,0 +1,8 @@
+//request to start an app
+{
+  "VTWDATA" : [
+    { "x" : "pitch" },
+    { "y" : "yaw" },
+    { "z" : "roll"}
+  ]
+}

@@ -1,0 +1,11 @@
+//request to stop an app
+{
+  "VTWCONTROL" : [
+    { "REQUEST" : "STOP" },
+    { "ID" : "app_id" },
+    { "OPTIONS" : [
+      { "OPT" : "opt" },
+      { "OPT1" : "opt1" }
+    ]}
+  ]
+}
