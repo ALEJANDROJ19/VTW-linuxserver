@@ -7,8 +7,8 @@
     { "PORT" : "data_port" },
     { "URI" : "data_uri" },
     { "OPTIONS" : [
-      { "OPT" : "opt" },
-      { "OPT1" : "opt1" }
+      { "OPTION" : "opt" },
+      { "OPTION" : "opt1" }
     ]}
   ]
 }

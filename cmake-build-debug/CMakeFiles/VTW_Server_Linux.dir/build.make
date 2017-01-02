@@ -81,28 +81,28 @@ CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o.provides: CMakeFiles/VTW_Server_L
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o
 
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o: ../UDPReceiver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/UDPReceiver.cpp
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o: ../udpServer/UDPReceiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/UDPReceiver.cpp > CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.i
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp > CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.i
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/UDPReceiver.cpp -o CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.s
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp -o CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.s
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.requires:
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.requires:
 
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.requires
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.requires
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.requires
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.provides.build
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.provides
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.provides
 
-CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o
+CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o
 
 
 CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXY.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
@@ -249,35 +249,88 @@ CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o.provides: CMakeF
 CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o
 
 
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../tcpServer/JsonHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp > CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.i
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
+
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../tcpServer/tcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp > CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
+
+
 # Object files for target VTW_Server_Linux
 VTW_Server_Linux_OBJECTS = \
 "CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o" \
-"CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXY.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXYZ.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/controlmodule.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/controller.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o" \
-"CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o"
+"CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o"
 
 # External object files for target VTW_Server_Linux
 VTW_Server_Linux_EXTERNAL_OBJECTS =
 
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o
-VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXY.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXYZ.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/controlmodule.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/controller.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/build.make
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libSM.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libICE.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libX11.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libXext.so
+VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libpython3.5m.so
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable VTW_Server_Linux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable VTW_Server_Linux"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VTW_Server_Linux.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -286,13 +339,15 @@ CMakeFiles/VTW_Server_Linux.dir/build: VTW_Server_Linux
 .PHONY : CMakeFiles/VTW_Server_Linux.dir/build
 
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o.requires
-CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXY.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/CoordinatesXYZ.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/controlmodule.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/controller.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
 
 .PHONY : CMakeFiles/VTW_Server_Linux.dir/requires
 

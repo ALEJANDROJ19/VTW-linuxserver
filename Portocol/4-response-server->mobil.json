@@ -2,7 +2,7 @@
 {
   "VTWCONTROL" : [
     { "RESPONSE" : "APP-LIST" },
-    { "APP-LIST" : [
+    { "APP_LIST" : [
       { "ID" : "app_id" },
       { "THUMBNAIL" : "bytes" },
       { "ID" : "app_id" },

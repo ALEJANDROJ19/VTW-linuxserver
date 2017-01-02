@@ -150,33 +150,6 @@ MainCore.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.s
 .PHONY : MainCore.cpp.s
 
-UDPReceiver.o: UDPReceiver.cpp.o
-
-.PHONY : UDPReceiver.o
-
-# target to build an object file
-UDPReceiver.cpp.o:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.o
-.PHONY : UDPReceiver.cpp.o
-
-UDPReceiver.i: UDPReceiver.cpp.i
-
-.PHONY : UDPReceiver.i
-
-# target to preprocess a source file
-UDPReceiver.cpp.i:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.i
-.PHONY : UDPReceiver.cpp.i
-
-UDPReceiver.s: UDPReceiver.cpp.s
-
-.PHONY : UDPReceiver.s
-
-# target to generate assembly for a file
-UDPReceiver.cpp.s:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/UDPReceiver.cpp.s
-.PHONY : UDPReceiver.cpp.s
-
 mouseController/CoordinatesXY.o: mouseController/CoordinatesXY.cpp.o
 
 .PHONY : mouseController/CoordinatesXY.o
@@ -339,6 +312,87 @@ mouseController/translate.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.s
 .PHONY : mouseController/translate.cpp.s
 
+tcpServer/JsonHandler.o: tcpServer/JsonHandler.cpp.o
+
+.PHONY : tcpServer/JsonHandler.o
+
+# target to build an object file
+tcpServer/JsonHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
+.PHONY : tcpServer/JsonHandler.cpp.o
+
+tcpServer/JsonHandler.i: tcpServer/JsonHandler.cpp.i
+
+.PHONY : tcpServer/JsonHandler.i
+
+# target to preprocess a source file
+tcpServer/JsonHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.i
+.PHONY : tcpServer/JsonHandler.cpp.i
+
+tcpServer/JsonHandler.s: tcpServer/JsonHandler.cpp.s
+
+.PHONY : tcpServer/JsonHandler.s
+
+# target to generate assembly for a file
+tcpServer/JsonHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s
+.PHONY : tcpServer/JsonHandler.cpp.s
+
+tcpServer/tcpServer.o: tcpServer/tcpServer.cpp.o
+
+.PHONY : tcpServer/tcpServer.o
+
+# target to build an object file
+tcpServer/tcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
+.PHONY : tcpServer/tcpServer.cpp.o
+
+tcpServer/tcpServer.i: tcpServer/tcpServer.cpp.i
+
+.PHONY : tcpServer/tcpServer.i
+
+# target to preprocess a source file
+tcpServer/tcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i
+.PHONY : tcpServer/tcpServer.cpp.i
+
+tcpServer/tcpServer.s: tcpServer/tcpServer.cpp.s
+
+.PHONY : tcpServer/tcpServer.s
+
+# target to generate assembly for a file
+tcpServer/tcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s
+.PHONY : tcpServer/tcpServer.cpp.s
+
+udpServer/UDPReceiver.o: udpServer/UDPReceiver.cpp.o
+
+.PHONY : udpServer/UDPReceiver.o
+
+# target to build an object file
+udpServer/UDPReceiver.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o
+.PHONY : udpServer/UDPReceiver.cpp.o
+
+udpServer/UDPReceiver.i: udpServer/UDPReceiver.cpp.i
+
+.PHONY : udpServer/UDPReceiver.i
+
+# target to preprocess a source file
+udpServer/UDPReceiver.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.i
+.PHONY : udpServer/UDPReceiver.cpp.i
+
+udpServer/UDPReceiver.s: udpServer/UDPReceiver.cpp.s
+
+.PHONY : udpServer/UDPReceiver.s
+
+# target to generate assembly for a file
+udpServer/UDPReceiver.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.s
+.PHONY : udpServer/UDPReceiver.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -351,9 +405,6 @@ help:
 	@echo "... MainCore.o"
 	@echo "... MainCore.i"
 	@echo "... MainCore.s"
-	@echo "... UDPReceiver.o"
-	@echo "... UDPReceiver.i"
-	@echo "... UDPReceiver.s"
 	@echo "... mouseController/CoordinatesXY.o"
 	@echo "... mouseController/CoordinatesXY.i"
 	@echo "... mouseController/CoordinatesXY.s"
@@ -372,6 +423,15 @@ help:
 	@echo "... mouseController/translate.o"
 	@echo "... mouseController/translate.i"
 	@echo "... mouseController/translate.s"
+	@echo "... tcpServer/JsonHandler.o"
+	@echo "... tcpServer/JsonHandler.i"
+	@echo "... tcpServer/JsonHandler.s"
+	@echo "... tcpServer/tcpServer.o"
+	@echo "... tcpServer/tcpServer.i"
+	@echo "... tcpServer/tcpServer.s"
+	@echo "... udpServer/UDPReceiver.o"
+	@echo "... udpServer/UDPReceiver.i"
+	@echo "... udpServer/UDPReceiver.s"
 .PHONY : help
 
 

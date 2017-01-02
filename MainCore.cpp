@@ -1,11 +1,13 @@
-#include "UDPReceiver.h"
+#include "udpServer/UDPReceiver.h"
 #include <signal.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include "tcpServer/tcpServer.h"
 
 void *threadUdp(void *) {
     UDPReceiver UdpReceiver;
     UdpReceiver.StartReceiver();
+    return nullptr;
 }
 
 void ExecFfmpeg() {
@@ -16,7 +18,7 @@ void ExecFfmpeg() {
             (char *)"-r",
             (char *)"25",
             (char *)"-s",
-            (char *)"720x576",
+            (char *)"1366x768",
             (char *)"-i",
             (char *)":0.0",
             (char *)"-f",
@@ -42,6 +44,8 @@ void ExecFfserver() {
 }
 
 int main(void) {
+    tcpServer tcpServer;
+    tcpServer.createTCPServer();
     pthread_t _threadUdp;
     pid_t _threadFfmpeg, _threadFfserver;
 

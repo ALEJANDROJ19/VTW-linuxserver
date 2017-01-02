@@ -5,7 +5,7 @@
 int UDPReceiver::StartReceiver() {
     initUDPSocket();
     do {
-        printf("Waiting for data...");
+        printf("Waiting for udp data...");
         fflush(stdout);
 
         // try to receive some data, this is a blocking call
@@ -15,7 +15,7 @@ int UDPReceiver::StartReceiver() {
         }
 
         // json parser
-        char *string = _Buffer;
+        //char *string = _Buffer;
         json_object *jobj, *jobjX, *jobjY, *jobjZ;
         jobj = json_tokener_parse(_Buffer);
         json_object_object_get_ex(jobj,"x",&jobjX);
@@ -29,16 +29,15 @@ int UDPReceiver::StartReceiver() {
         module.input(CoordinatesXYZ((float)coordX, (float)coordY, (float)coordZ));
 
         // debug print details of the client/peer and the data received
-        printf("Received packet from %s:%d\n", inet_ntoa(si_other.sin_addr),
-           ntohs(si_other.sin_port));
-        printf("data: %s\n", _Buffer);
-        printf("coord_x: %f\n", coordX);
-        printf("coord_y: %f\n", coordY);
-        printf("coord_z: %f\n", coordZ);
+//        printf("Received packet from %s:%d\n", inet_ntoa(si_other.sin_addr),
+//           ntohs(si_other.sin_port));
+//        printf("data: %s\n", _Buffer);
+//        printf("coord_x: %f\n", coordX);
+//        printf("coord_y: %f\n", coordY);
+//        printf("coord_z: %f\n", coordZ);
         // end debug
 
     } while (true);
-    return 0;
 }
 #pragma clang diagnostic pop
 
@@ -47,13 +46,13 @@ void UDPReceiver::initUDPSocket() {
     // create a UDP socket
     if ((_Socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1) { ext((char *)"socket"); }
     // zero out the structure
-    memset((char *)&si_me, 0, sizeof(si_me));
-    si_me.sin_family = AF_INET;
-    si_me.sin_port = htons(PORT);
-    si_me.sin_addr.s_addr = htonl(INADDR_ANY);
+    memset((char *)&server, 0, sizeof(server));
+    server.sin_family = AF_INET;
+    server.sin_port = htons(PORT);
+    server.sin_addr.s_addr = htonl(INADDR_ANY);
 
     // bind socket to port
-    if (bind(_Socket, (struct sockaddr *)&si_me, sizeof(si_me)) == -1) { ext((char *)"bind"); }
+    if (bind(_Socket, (struct sockaddr *)&server, sizeof(server)) == -1) { ext((char *)"bind"); }
 }
 
 void UDPReceiver::ext(char *s) {

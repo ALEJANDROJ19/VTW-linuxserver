@@ -44,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/python3.5m"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -67,6 +68,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/usr/include/python3.5m"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
@@ -87,10 +89,7 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/MainCore.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/UDPReceiver.cpp">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/UDPReceiver.h">
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.cpp">
@@ -127,6 +126,24 @@
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/CMakeLists.txt">

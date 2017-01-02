@@ -7,10 +7,13 @@ find_package(X11 REQUIRED)
 link_libraries(${X11_LIBRARIES})
 include_directories(${X11_INCLUDE_DIR})
 
+find_package(PythonLibs 3.5 REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+
 set(SOURCE_FILES
         MainCore.cpp
-        UDPReceiver.cpp
-        UDPReceiver.h
+        udpServer/UDPReceiver.cpp
+        udpServer/UDPReceiver.h
         mouseController/CoordinatesXY.cpp
         mouseController/CoordinatesXY.h
         mouseController/CoordinatesXYZ.cpp
@@ -22,10 +25,10 @@ set(SOURCE_FILES
         mouseController/stdafx.cpp
         mouseController/stdafx.h
         mouseController/translate.cpp
-        mouseController/translate.h)
+        mouseController/translate.h tcpServer/JsonHandler.cpp tcpServer/JsonHandler.h Portocol/HeaderDef.h tcpServer/tcpServer.cpp tcpServer/tcpServer.h)
 
 add_executable(VTW_Server_Linux ${SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c)
+TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c ${PYTHON_LIBRARIES})
 
 
