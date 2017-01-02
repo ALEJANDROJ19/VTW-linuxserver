@@ -7,9 +7,6 @@ find_package(X11 REQUIRED)
 link_libraries(${X11_LIBRARIES})
 include_directories(${X11_INCLUDE_DIR})
 
-find_package(PythonLibs 3.5 REQUIRED)
-include_directories(${PYTHON_INCLUDE_DIRS})
-
 set(SOURCE_FILES
         MainCore.cpp
         udpServer/UDPReceiver.cpp
@@ -29,6 +26,6 @@ set(SOURCE_FILES
 
 add_executable(VTW_Server_Linux ${SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c ${PYTHON_LIBRARIES})
+TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c)
 
 

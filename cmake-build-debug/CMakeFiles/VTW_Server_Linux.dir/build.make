@@ -328,7 +328,6 @@ VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libSM.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libICE.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libX11.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libXext.so
-VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libpython3.5m.so
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable VTW_Server_Linux"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VTW_Server_Linux.dir/link.txt --verbose=$(VERBOSE)

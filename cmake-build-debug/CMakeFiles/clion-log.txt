@@ -1,5 +1,4 @@
 /home/pau/Documents/JetBrains/clion-2016.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver
--- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.5m.so (found suitable version "3.5.2", minimum required is "3.5") 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug
