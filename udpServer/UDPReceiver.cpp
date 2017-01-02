@@ -9,7 +9,7 @@ int UDPReceiver::StartReceiver() {
         fflush(stdout);
 
         // try to receive some data, this is a blocking call
-        if ((recv_len = recvfrom(_Socket, _Buffer, BUFLEN, 0,
+        if ((recvfrom(_Socket, _Buffer, BUFLEN, 0,
                              (struct sockaddr *)&si_other, &slen)) == -1) {
             ext((char *)"recvfrom()");
         }
