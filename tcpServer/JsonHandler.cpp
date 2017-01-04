@@ -1,7 +1,7 @@
 #include "JsonHandler.h"
 
 const char* JsonHandler::handleJsonData(json_object * jsonObject) {
-    struct json_object *array, *object;
+    struct json_object *array, *object, *jobj;
     int i, arraylen = json_object_array_length(jsonObject);
 
     array = json_object_array_get_idx(jsonObject, 0);
@@ -10,25 +10,32 @@ const char* JsonHandler::handleJsonData(json_object * jsonObject) {
 
     if(strcmp(eval,J_CODE_DISCOVERY) == 0) {
         return json_object_get_string(create2BroadcastResponseOk((char*)"0.0.0.0", (char*)"21211"));
-    } else if (strcmp(eval,J_CODE_REQUESTAPP) == 0) {
+    }
+    else if (strcmp(eval,J_CODE_REQUESTAPP) == 0) {
         return json_object_get_string(create4AppResponse(1, nullptr));
-    } else if (strcmp(eval,J_CODE_UPDATEAPP) == 0) {
+    }
+    else if (strcmp(eval,J_CODE_UPDATEAPP) == 0) {
         char str[10]; //10 max app update lenght
         for (i = 1; i < arraylen && i < 50; i++) {
-            str[i] = *json_object_get_string(json_object_array_get_idx(jsonObject, i));
+            array = json_object_array_get_idx(jsonObject, i);
+            json_object_object_get_ex(array, J_APP, &jobj);
+            str[i] = *json_object_get_string(jobj);
         }
         return json_object_get_string(create4AppResponse(0,str));
-    } else if (strcmp(eval,J_CODE_START) == 0) {
-        int app;
-        //todo get app
-        app = 0;
+    }
+    else if (strcmp(eval,J_CODE_START) == 0) {
+        array = json_object_array_get_idx(jsonObject, 1);
+        json_object_object_get_ex(array, J_ID, &jobj);
+        int app = json_object_get_int(jobj);
         return json_object_get_string(create6StartStopResponse(1,app));
-    } else if (strcmp(eval,J_CODE_STOP) == 0) {
-        int app;
-        //todo get app
-        app = 0;
+    }
+    else if (strcmp(eval,J_CODE_STOP) == 0) {
+        array = json_object_array_get_idx(jsonObject, 1);
+        json_object_object_get_ex(array, J_ID, &jobj);
+        int app = json_object_get_int(jobj);
         return json_object_get_string(create6StartStopResponse(0,app));
-    } else
+    }
+    else
         return nullptr;
 }
 
@@ -57,22 +64,23 @@ json_object* JsonHandler::create2BroadcastResponseOk(char* ip, char* port) {
 }
 
 json_object *JsonHandler::create4AppResponse(int code, char str[]) {
-    char app[100];
+    int max_size = 100;
+    char* app_list;
+    char* app_thumb;
 
     if(code){
-        //todo get all the apps
-        //app[] = ...
+        app_list = app.getAppList();
     } else {
-        //todo update the apps
-        //str[] == app[] ...
+        app_list = app.updateAppList(str);
     }
+    app_thumb = app.getAppThumb();
 
     json_object *jarray = json_object_new_array();
     if(str != nullptr) {
         int i = 0;
-        while (i < sizeof(str) && str[i] != NULL) {
-            json_object *jstr = json_object_new_string(&str[i]);
-            json_object *jtumb = json_object_new_string((char *) 'c');
+        while (i < max_size && app_list[i] != '\0') {
+            json_object *jstr = json_object_new_string(&app_list[i]);
+            json_object *jtumb = json_object_new_string(&app_thumb[i]);
 
             json_object *jobjstr = json_object_new_object();
             json_object *jobjtumb = json_object_new_object();
@@ -104,29 +112,31 @@ json_object *JsonHandler::create4AppResponse(int code, char str[]) {
     return resjobj;
 }
 
-json_object *JsonHandler::create6StartStopResponse(int code, int app) {
+json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
 
     if(!code){
-        //todo stop the app
+        app.stop(app_id);
         return nullptr;
     }
-    //todo start app with code app and get:
-    //todo get the data ip
-    //todo get the port
-    //todo get the data uri
-    char app_id[20], *app_ip, *app_port, *app_uri;
+    if(app.start(app_id) == -1)
+        return create7Error((char*)"JUJUJU",NULL);
 
-    snprintf(app_id, 20, "%d", app);
-    app_ip = (char*) "0.0.0.0";
-    app_port = (char*) "00000";
-    app_uri = (char*) "uri";
+    //todo get the port '_PORT' def is 8090
+    //todo get the data uri '_URI' def is test1.webm
+
+    char app_id_c[20], *app_ip, *app_port, *app_uri;
+
+    snprintf(app_id_c, 20, "%d", app_id);
+    app_ip = _IP;
+    app_port = _PORT;
+    app_uri = _URI;
 
     json_object *jcode = json_object_new_string(J_CODE_START);
     json_object *jobjcode = json_object_new_object();
     json_object_object_add(jobjcode, J_RESPONSE, jcode);
 
 
-    json_object *jid = json_object_new_string(app_id);
+    json_object *jid = json_object_new_string(app_id_c);
     json_object *jobjid = json_object_new_object();
     json_object_object_add(jobjid, J_ID, jid);
 
@@ -158,6 +168,15 @@ json_object *JsonHandler::create7Error(char* code, json_object *obj) {
     json_object *jobj = json_object_new_object();
     json_object *jcode = json_object_new_string(code);
     json_object_object_add(jobj,J_ERROR, jcode);
-    json_object_object_add(jobj,J_MESSAGE, obj);
-    return jobj;
+
+    json_object *jarray = json_object_new_array();
+    json_object_array_add(jarray, jobj);
+
+    json_object *resjobj = json_object_new_object();
+    json_object_object_add(resjobj,J_VTWCONTROL,jarray);
+    return resjobj;
+}
+
+void JsonHandler::setIP(char *ip) {
+    _IP = ip;
 }

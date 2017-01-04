@@ -7,6 +7,7 @@
 #define J_IP "IP"
 #define J_PORT "PORT"
 #define J_APP_LIST "APP_LIST"
+#define J_APP "APP"
 #define J_ID "ID"
 #define J_THUMBNAIL "THUMBNAIL"
 #define J_URI "URI"

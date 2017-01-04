@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/mouseController/controlmodule.cpp.o"
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o"
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o"
+  "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o"
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o"
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o"
   "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp" "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o"

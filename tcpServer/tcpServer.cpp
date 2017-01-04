@@ -5,6 +5,7 @@
 int tcpServer::createTCPServer() {
     _IP = getIpAddress();
     jsonHandler = JsonHandler();
+    jsonHandler.setIP(_IP);
     if ((_Socket = socket(AF_INET , SOCK_STREAM , 0)) == -1) { ext((char *)"socket"); }
     memset((char *)&server, 0, sizeof(server));
     server.sin_addr.s_addr = inet_addr("0.0.0.0");

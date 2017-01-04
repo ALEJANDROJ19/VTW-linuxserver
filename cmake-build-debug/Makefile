@@ -312,6 +312,33 @@ mouseController/translate.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.s
 .PHONY : mouseController/translate.cpp.s
 
+startApp/startApp.o: startApp/startApp.cpp.o
+
+.PHONY : startApp/startApp.o
+
+# target to build an object file
+startApp/startApp.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o
+.PHONY : startApp/startApp.cpp.o
+
+startApp/startApp.i: startApp/startApp.cpp.i
+
+.PHONY : startApp/startApp.i
+
+# target to preprocess a source file
+startApp/startApp.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.i
+.PHONY : startApp/startApp.cpp.i
+
+startApp/startApp.s: startApp/startApp.cpp.s
+
+.PHONY : startApp/startApp.s
+
+# target to generate assembly for a file
+startApp/startApp.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.s
+.PHONY : startApp/startApp.cpp.s
+
 tcpServer/JsonHandler.o: tcpServer/JsonHandler.cpp.o
 
 .PHONY : tcpServer/JsonHandler.o
@@ -423,6 +450,9 @@ help:
 	@echo "... mouseController/translate.o"
 	@echo "... mouseController/translate.i"
 	@echo "... mouseController/translate.s"
+	@echo "... startApp/startApp.o"
+	@echo "... startApp/startApp.i"
+	@echo "... startApp/startApp.s"
 	@echo "... tcpServer/JsonHandler.o"
 	@echo "... tcpServer/JsonHandler.i"
 	@echo "... tcpServer/JsonHandler.s"

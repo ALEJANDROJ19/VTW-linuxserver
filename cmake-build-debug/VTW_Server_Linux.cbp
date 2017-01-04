@@ -126,6 +126,12 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
