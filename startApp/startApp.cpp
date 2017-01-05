@@ -51,47 +51,54 @@ int startApp::start(int app_id){
 
     //todo start app with id 'app_id'
 
-    // ffserver fork
-    _threadFfserver = fork();
-    if (_threadFfserver == 0) {
-        ExecFfserver();
-    } else if (_threadFfserver < 0) {
-        printf("%s%s\n", "Error on ffserver: ", strerror(errno));
-        exit(1);
-    }
-    // ffmpef fork
-    _threadFfmpeg = fork();
-    if (_threadFfmpeg == 0) {
-        sleep(3);
-        ExecFfmpeg();
-    } else if (_threadFfmpeg < 0) {
-        printf("%s%s\n", "error ffmpeg: ", strerror(errno));
-        exit(1);
-    }
-    // udpserver thread
-    startApp app;
-    int eval = pthread_create(&_threadUdp, NULL, &startApp::threadUdp_Starter, &app);
-    if (eval) {
-        fprintf(stderr, "Error thread UDP");
-        exit(EXIT_FAILURE);
-    }
+    //todo uncomment ffserver ffmpeg and udpserver execs
+//    // ffserver fork
+//    _threadFfserver = fork();
+//    if (_threadFfserver == 0) {
+//        ExecFfserver();
+//    } else if (_threadFfserver < 0) {
+//        printf("%s%s\n", "Error on ffserver: ", strerror(errno));
+//        exit(1);
+//    }
+//    // ffmpef fork
+//    _threadFfmpeg = fork();
+//    if (_threadFfmpeg == 0) {
+//        sleep(3);
+//        ExecFfmpeg();
+//    } else if (_threadFfmpeg < 0) {
+//        printf("%s%s\n", "error ffmpeg: ", strerror(errno));
+//        exit(1);
+//    }
+//    // udpserver thread
+//    startApp app;
+//    int eval = pthread_create(&_threadUdp, NULL, &startApp::threadUdp_Starter, &app);
+//    if (eval) {
+//        fprintf(stderr, "Error thread UDP");
+//        exit(EXIT_FAILURE);
+//    }
+
     status = true;
     return 0;
 }
 
-void startApp::stop(int app_id) {
+int startApp::stop(int app_id) {
+
+    if (!status)
+        return -1;
 
     //todo stop the app with 'app_id'
 
-    int stat;
-    kill(_threadFfserver, 9);
-    kill(_threadFfmpeg, 9);
-    pthread_kill(_threadUdp, 9);
-    waitpid(_threadFfmpeg, &stat, WUNTRACED | WCONTINUED);
-    waitpid(_threadFfserver, &stat, WUNTRACED | WCONTINUED);
-    pthread_join(_threadUdp, NULL);
+    //todo uncomment ffserver ffmpeg and udpserver kills
+//    int stat;
+//    kill(_threadFfserver, 9);
+//    kill(_threadFfmpeg, 9);
+//    pthread_kill(_threadUdp, 9);
+//    waitpid(_threadFfmpeg, &stat, WUNTRACED | WCONTINUED);
+//    waitpid(_threadFfserver, &stat, WUNTRACED | WCONTINUED);
+//    pthread_join(_threadUdp, NULL);
 
     status = false;
+    return 0;
 }
 
 char *startApp::getAppList() {

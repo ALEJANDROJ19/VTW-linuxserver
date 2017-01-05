@@ -22,5 +22,7 @@
 #define J_CODE_START "START"
 #define J_CODE_STOP "STOP"
 
+#define ERROR_NOAPPRUNNING "Error no app is running"
+#define ERROR_APPRUNNING "Error one app is already running"
 
 #endif //VTW_SERVER_LINUX_HEADERDEF_H

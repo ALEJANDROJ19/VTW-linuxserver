@@ -7,13 +7,7 @@
 #IncludeRegexTransform: 
 
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/MainCore.cpp
-udpServer/UDPReceiver.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
-signal.h
--
-sys/wait.h
--
-unistd.h
+pthread.h
 -
 tcpServer/tcpServer.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
@@ -90,6 +84,20 @@ CoordinatesXY.h
 CoordinatesXYZ.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
 
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp
+startApp.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+../udpServer/UDPReceiver.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
+signal.h
+-
+sys/wait.h
+-
+unistd.h
+-
+
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp
 JsonHandler.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
@@ -105,6 +113,8 @@ cstring
 -
 ../Portocol/HeaderDef.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
+../startApp/startApp.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
 stdio.h
 -
 stdlib.h

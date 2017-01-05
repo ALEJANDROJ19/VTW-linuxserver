@@ -9,6 +9,7 @@ CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../mouseController/controller.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../mouseController/controlmodule.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../mouseController/stdafx.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../mouseController/translate.h
+CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../startApp/startApp.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../tcpServer/JsonHandler.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../tcpServer/tcpServer.h
 CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o: ../udpServer/UDPReceiver.h
@@ -131,14 +132,40 @@ CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o: ../mouseControl
 CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o: ../mouseController/translate.cpp
 CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o: ../mouseController/translate.h
 
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/CoordinatesXY.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/CoordinatesXYZ.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/controller.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/controlmodule.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/stdafx.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../mouseController/translate.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../startApp/startApp.cpp
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../startApp/startApp.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: ../udpServer/UDPReceiver.h
+
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../Portocol/HeaderDef.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/CoordinatesXY.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/CoordinatesXYZ.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/controller.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/controlmodule.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/stdafx.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../mouseController/translate.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../startApp/startApp.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../tcpServer/JsonHandler.cpp
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../tcpServer/JsonHandler.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o: ../udpServer/UDPReceiver.h
 
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../Portocol/HeaderDef.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/CoordinatesXY.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/CoordinatesXYZ.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/controller.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/controlmodule.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/stdafx.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../mouseController/translate.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../startApp/startApp.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../tcpServer/JsonHandler.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../tcpServer/tcpServer.cpp
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../tcpServer/tcpServer.h
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: /usr/include/python3.5/Python.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: /usr/include/python3.5/abstract.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: /usr/include/python3.5/bltinmodule.h

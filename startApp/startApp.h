@@ -9,7 +9,7 @@
 class startApp {
 public:
     int start(int);
-    void stop(int);
+    int stop(int);
     char* getAppList();
     char* updateAppList(char[]);
     char* getAppThumb();

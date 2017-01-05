@@ -10,6 +10,7 @@ CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
@@ -131,15 +132,41 @@ CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.cpp
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controller.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controller.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controller.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
  /usr/include/python3.5/Python.h
  /usr/include/python3.5/abstract.h
  /usr/include/python3.5/bltinmodule.h

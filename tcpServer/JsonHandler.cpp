@@ -6,7 +6,7 @@ const char* JsonHandler::handleJsonData(json_object * jsonObject) {
 
     array = json_object_array_get_idx(jsonObject, 0);
     json_object_object_get_ex(array, J_REQUEST, &object);
-    static const char* eval = json_object_get_string(object);
+    const char* eval = json_object_get_string(object);
 
     if(strcmp(eval,J_CODE_DISCOVERY) == 0) {
         return json_object_get_string(create2BroadcastResponseOk((char*)"0.0.0.0", (char*)"21211"));
@@ -114,19 +114,37 @@ json_object *JsonHandler::create4AppResponse(int code, char str[]) {
 
 json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
 
+    char app_id_c[20], *app_ip, *app_port, *app_uri;
+    snprintf(app_id_c, 20, "%d", app_id);
+
     if(!code){
-        app.stop(app_id);
-        return nullptr;
+        if(app.stop(app_id) == 1)
+            return create7Error((char*)ERROR_NOAPPRUNNING,NULL);
+        else{
+            json_object *jcode = json_object_new_string(J_CODE_STOP);
+            json_object *jobjcode = json_object_new_object();
+            json_object_object_add(jobjcode, J_RESPONSE, jcode);
+
+            json_object *jid = json_object_new_string(app_id_c);
+            json_object *jobjid = json_object_new_object();
+            json_object_object_add(jobjid, J_ID, jid);
+
+            json_object *jarray = json_object_new_array();
+            json_object_array_add(jarray, jobjcode);
+            json_object_array_add(jarray, jobjid);
+
+            json_object *resjobj = json_object_new_object();
+            json_object_object_add(resjobj,J_VTWCONTROL,jarray);
+            return resjobj;
+        }
+
     }
-    if(app.start(app_id) == -1)
-        return create7Error((char*)"JUJUJU",NULL);
+    if(app.start(app_id) == 1)
+        return create7Error((char*)ERROR_APPRUNNING,NULL);
 
     //todo get the port '_PORT' def is 8090
     //todo get the data uri '_URI' def is test1.webm
 
-    char app_id_c[20], *app_ip, *app_port, *app_uri;
-
-    snprintf(app_id_c, 20, "%d", app_id);
     app_ip = _IP;
     app_port = _PORT;
     app_uri = _URI;
@@ -154,8 +172,8 @@ json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
 
     json_object *jarray = json_object_new_array();
     json_object_array_add(jarray, jobjcode);
-    json_object_array_add(jarray, jobjip);
     json_object_array_add(jarray, jobjid);
+    json_object_array_add(jarray, jobjip);
     json_object_array_add(jarray, jobjport);
     json_object_array_add(jarray, jobjuri);
 
