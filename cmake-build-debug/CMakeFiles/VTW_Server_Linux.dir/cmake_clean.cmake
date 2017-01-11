@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o"
   "CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o"
   "CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o"
+  "CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o"
+  "CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o"
   "VTW_Server_Linux.pdb"
   "VTW_Server_Linux"
 )

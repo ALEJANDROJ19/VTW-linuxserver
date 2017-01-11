@@ -6,31 +6,38 @@ int tcpServer::createTCPServer() {
     _IP = getIpAddress();
     jsonHandler = JsonHandler();
     jsonHandler.setIP(_IP);
-    if ((_Socket = socket(AF_INET , SOCK_STREAM , 0)) == -1) { ext((char *)"socket"); }
+    if ((_Socket = socket(AF_INET , SOCK_STREAM , 0)) == -1)
+        ext((char *)"socket");
     memset((char *)&server, 0, sizeof(server));
     server.sin_addr.s_addr = inet_addr("0.0.0.0");
     server.sin_family = AF_INET;
     server.sin_port = htons(TCP_PORT);
 
-    if (bind(_Socket, (struct sockaddr *)&server , sizeof(server)) < 0) { ext((char *)"connect"); }
+    if (bind(_Socket, (struct sockaddr *)&server , sizeof(server)) < 0)
+        ext((char *)"connect");
 
     checkandSetKeepAlive();
 
-    do {
-        int clientfd;
-        struct sockaddr_in cli_addr;
-        ssize_t n;
-        socklen_t client = sizeof(cli_addr);
+    int clientfd;
+    struct sockaddr_in cli_addr;
+    ssize_t n;
+    socklen_t client = sizeof(cli_addr);
 
+    while (true) {
+        //accept connections - bloking call
         listen(_Socket,5);
         clientfd = accept(_Socket, (struct sockaddr *) &cli_addr, &client);
 
-        if (clientfd < 0){ ext((char *)"accept"); }
+        if (clientfd < 0)
+            ext((char *)"accept");
+
+        //read from the soket
         bzero(_Buffer,BUFFLEN);
         n = read(clientfd, _Buffer, BUFFLEN);
+
         if (n < 0) { ext((char *)"socket read"); }
 
-        //if we got a post message
+        //if we got a post message clean the buffer
         if (strstr (_Buffer,"POST")) {
             json_object *jobj, *jobjres;
             char array[BUFFLEN];
@@ -48,41 +55,42 @@ int tcpServer::createTCPServer() {
             jobj = json_tokener_parse(array);
             json_object_object_get_ex(jobj, J_VTWCONTROL, &jobjres);
             char tmpBuffer[BUFFLEN];
-            if(jobj != nullptr) {
-                receivedNewMessage(jobjres, *tmpBuffer);
-                n = write(clientfd, tmpBuffer, strlen(tmpBuffer));
-                if (n < 0) {
-                    perror("sendto() error");
-                    close(_Socket);
-                    free(_IP);
-                    exit(-1);
-                } else {
-                    printf("sent n:%i",(int)n);
-                }
-                close(clientfd);
-            }
 
-//            char str[INET_ADDRSTRLEN];
-//            inet_ntop(AF_INET, &(cli_addr.sin_addr), str, INET_ADDRSTRLEN);
-//            printf("new paquet send to: %s\n", str);
+            //parse new message and get response
+            if(jobjres != nullptr) {
+                receivedNewMessage(jobjres, *tmpBuffer);
+                if ((write(clientfd, tmpBuffer, strlen(tmpBuffer))) < 0)
+                    perror("sendto() error");
+            }
         }
-    } while (true);
+        //close the connection
+        if (shutdown(clientfd, SHUT_RDWR) < 0) // terminate the 'reliable' delivery
+            if (errno != ENOTCONN && errno != EINVAL) // SGI causes EINVAL
+                perror("shutdown");
+        if (close(clientfd) < 0) // finally call close()
+            perror("close");
+    }
 }
 #pragma clang diagnostic pop
 
 void tcpServer::receivedNewMessage(json_object *jobj, char &buffer) {
     bzero(&buffer, BUFFLEN);
-    const char* tmp = jsonHandler.handleJsonData(jobj);
     char* ok_response = new char[248];
     sprintf(ok_response, "HTTP/1.0 200 OK\n"
-            "Connection: close\n"
+            "Server: VTW Server\n"
+            "Connection: Close\n"
             "Content-Type:application/json\n"
             "\r\n\r\n"
     );
 
     strcpy(&buffer, ok_response);
-    strcat(&buffer, tmp);
     delete[] ok_response;
+
+    if(jobj != nullptr) {
+        const char* tmp = jsonHandler.handleJsonData(jobj);
+        strcat(&buffer, tmp);
+    }
+    // todo else create json error and remove the calling non null on json
 }
 
 void tcpServer::checkandSetKeepAlive(){

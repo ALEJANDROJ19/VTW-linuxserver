@@ -126,6 +126,21 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/Thread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>

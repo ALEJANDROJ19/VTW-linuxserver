@@ -18,7 +18,6 @@
 #include <cstring>
 #include <ifaddrs.h>
 #include <errno.h>
-#include "/usr/include/python3.5/Python.h"
 
 class tcpServer {
 
