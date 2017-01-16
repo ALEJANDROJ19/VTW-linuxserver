@@ -2,8 +2,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include "Threads/UdpThreadCode.h"
-#include "Threads/ForkThread.h"
+#include "../Threads/UdpThread.h"
+#include "../Threads/ForkThread.h"
 
 #ifndef VTW_SERVER_LINUX_STARTAPP_H
 #define VTW_SERVER_LINUX_STARTAPP_H

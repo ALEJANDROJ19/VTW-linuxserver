@@ -2,6 +2,7 @@
 #define VTW_SERVER_LINUX_HEADERDEF_H
 
 #define J_VTWCONTROL "VTWCONTROL"
+#define J_VTWDATA "VTWDATA"
 #define J_REQUEST "REQUEST"
 #define J_RESPONSE "RESPONSE"
 #define J_IP "IP"
@@ -21,6 +22,9 @@
 #define J_CODE_UPDATEAPP "APP-UPDATE"
 #define J_CODE_START "START"
 #define J_CODE_STOP "STOP"
+#define J_CODE_X "x"
+#define J_CODE_Y "y"
+#define J_CODE_Z "z"
 
 #define ERROR_NOAPPRUNNING "Error no app is running"
 #define ERROR_APPRUNNING "Error one app is already running"

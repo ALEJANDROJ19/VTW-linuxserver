@@ -150,6 +150,60 @@ MainCore.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.s
 .PHONY : MainCore.cpp.s
 
+Threads/ForkThread.o: Threads/ForkThread.cpp.o
+
+.PHONY : Threads/ForkThread.o
+
+# target to build an object file
+Threads/ForkThread.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o
+.PHONY : Threads/ForkThread.cpp.o
+
+Threads/ForkThread.i: Threads/ForkThread.cpp.i
+
+.PHONY : Threads/ForkThread.i
+
+# target to preprocess a source file
+Threads/ForkThread.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.i
+.PHONY : Threads/ForkThread.cpp.i
+
+Threads/ForkThread.s: Threads/ForkThread.cpp.s
+
+.PHONY : Threads/ForkThread.s
+
+# target to generate assembly for a file
+Threads/ForkThread.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.s
+.PHONY : Threads/ForkThread.cpp.s
+
+Threads/UdpThread.o: Threads/UdpThread.cpp.o
+
+.PHONY : Threads/UdpThread.o
+
+# target to build an object file
+Threads/UdpThread.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o
+.PHONY : Threads/UdpThread.cpp.o
+
+Threads/UdpThread.i: Threads/UdpThread.cpp.i
+
+.PHONY : Threads/UdpThread.i
+
+# target to preprocess a source file
+Threads/UdpThread.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.i
+.PHONY : Threads/UdpThread.cpp.i
+
+Threads/UdpThread.s: Threads/UdpThread.cpp.s
+
+.PHONY : Threads/UdpThread.s
+
+# target to generate assembly for a file
+Threads/UdpThread.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.s
+.PHONY : Threads/UdpThread.cpp.s
+
 mouseController/CoordinatesXY.o: mouseController/CoordinatesXY.cpp.o
 
 .PHONY : mouseController/CoordinatesXY.o
@@ -312,60 +366,6 @@ mouseController/translate.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.s
 .PHONY : mouseController/translate.cpp.s
 
-startApp/Threads/ForkThread.o: startApp/Threads/ForkThread.cpp.o
-
-.PHONY : startApp/Threads/ForkThread.o
-
-# target to build an object file
-startApp/Threads/ForkThread.cpp.o:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o
-.PHONY : startApp/Threads/ForkThread.cpp.o
-
-startApp/Threads/ForkThread.i: startApp/Threads/ForkThread.cpp.i
-
-.PHONY : startApp/Threads/ForkThread.i
-
-# target to preprocess a source file
-startApp/Threads/ForkThread.cpp.i:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.i
-.PHONY : startApp/Threads/ForkThread.cpp.i
-
-startApp/Threads/ForkThread.s: startApp/Threads/ForkThread.cpp.s
-
-.PHONY : startApp/Threads/ForkThread.s
-
-# target to generate assembly for a file
-startApp/Threads/ForkThread.cpp.s:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.s
-.PHONY : startApp/Threads/ForkThread.cpp.s
-
-startApp/Threads/UdpThreadCode.o: startApp/Threads/UdpThreadCode.cpp.o
-
-.PHONY : startApp/Threads/UdpThreadCode.o
-
-# target to build an object file
-startApp/Threads/UdpThreadCode.cpp.o:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o
-.PHONY : startApp/Threads/UdpThreadCode.cpp.o
-
-startApp/Threads/UdpThreadCode.i: startApp/Threads/UdpThreadCode.cpp.i
-
-.PHONY : startApp/Threads/UdpThreadCode.i
-
-# target to preprocess a source file
-startApp/Threads/UdpThreadCode.cpp.i:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.i
-.PHONY : startApp/Threads/UdpThreadCode.cpp.i
-
-startApp/Threads/UdpThreadCode.s: startApp/Threads/UdpThreadCode.cpp.s
-
-.PHONY : startApp/Threads/UdpThreadCode.s
-
-# target to generate assembly for a file
-startApp/Threads/UdpThreadCode.cpp.s:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.s
-.PHONY : startApp/Threads/UdpThreadCode.cpp.s
-
 startApp/startApp.o: startApp/startApp.cpp.o
 
 .PHONY : startApp/startApp.o
@@ -419,6 +419,33 @@ tcpServer/JsonHandler.s: tcpServer/JsonHandler.cpp.s
 tcpServer/JsonHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s
 .PHONY : tcpServer/JsonHandler.cpp.s
+
+tcpServer/TcpThread.o: tcpServer/TcpThread.cpp.o
+
+.PHONY : tcpServer/TcpThread.o
+
+# target to build an object file
+tcpServer/TcpThread.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
+.PHONY : tcpServer/TcpThread.cpp.o
+
+tcpServer/TcpThread.i: tcpServer/TcpThread.cpp.i
+
+.PHONY : tcpServer/TcpThread.i
+
+# target to preprocess a source file
+tcpServer/TcpThread.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.i
+.PHONY : tcpServer/TcpThread.cpp.i
+
+tcpServer/TcpThread.s: tcpServer/TcpThread.cpp.s
+
+.PHONY : tcpServer/TcpThread.s
+
+# target to generate assembly for a file
+tcpServer/TcpThread.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.s
+.PHONY : tcpServer/TcpThread.cpp.s
 
 tcpServer/tcpServer.o: tcpServer/tcpServer.cpp.o
 
@@ -486,6 +513,12 @@ help:
 	@echo "... MainCore.o"
 	@echo "... MainCore.i"
 	@echo "... MainCore.s"
+	@echo "... Threads/ForkThread.o"
+	@echo "... Threads/ForkThread.i"
+	@echo "... Threads/ForkThread.s"
+	@echo "... Threads/UdpThread.o"
+	@echo "... Threads/UdpThread.i"
+	@echo "... Threads/UdpThread.s"
 	@echo "... mouseController/CoordinatesXY.o"
 	@echo "... mouseController/CoordinatesXY.i"
 	@echo "... mouseController/CoordinatesXY.s"
@@ -504,18 +537,15 @@ help:
 	@echo "... mouseController/translate.o"
 	@echo "... mouseController/translate.i"
 	@echo "... mouseController/translate.s"
-	@echo "... startApp/Threads/ForkThread.o"
-	@echo "... startApp/Threads/ForkThread.i"
-	@echo "... startApp/Threads/ForkThread.s"
-	@echo "... startApp/Threads/UdpThreadCode.o"
-	@echo "... startApp/Threads/UdpThreadCode.i"
-	@echo "... startApp/Threads/UdpThreadCode.s"
 	@echo "... startApp/startApp.o"
 	@echo "... startApp/startApp.i"
 	@echo "... startApp/startApp.s"
 	@echo "... tcpServer/JsonHandler.o"
 	@echo "... tcpServer/JsonHandler.i"
 	@echo "... tcpServer/JsonHandler.s"
+	@echo "... tcpServer/TcpThread.o"
+	@echo "... tcpServer/TcpThread.i"
+	@echo "... tcpServer/TcpThread.s"
 	@echo "... tcpServer/tcpServer.o"
 	@echo "... tcpServer/tcpServer.i"
 	@echo "... tcpServer/tcpServer.s"

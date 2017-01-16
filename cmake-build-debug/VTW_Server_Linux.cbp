@@ -90,6 +90,21 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
@@ -126,21 +141,6 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.cpp">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.h">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/Thread.h">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.cpp">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.h">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
@@ -151,6 +151,12 @@
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp">

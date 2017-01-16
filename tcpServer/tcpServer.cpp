@@ -52,6 +52,12 @@ int tcpServer::createTCPServer() {
                 c++;
             }
             array[c] = '\0';
+
+            char sourceIP[INET_ADDRSTRLEN];
+            inet_ntop(AF_INET, &(cli_addr.sin_addr), sourceIP, INET_ADDRSTRLEN);
+            printf("\n ### new connection from: %s\n", sourceIP);
+            printf("### Request:\n%s\n", array);
+
             jobj = json_tokener_parse(array);
             json_object_object_get_ex(jobj, J_VTWCONTROL, &jobjres);
             char tmpBuffer[BUFFLEN];
@@ -59,6 +65,7 @@ int tcpServer::createTCPServer() {
             //parse new message and get response
             if(jobjres != nullptr) {
                 receivedNewMessage(jobjres, *tmpBuffer);
+                printf("### Response:\n%s\n", tmpBuffer);
                 if ((write(clientfd, tmpBuffer, strlen(tmpBuffer))) < 0)
                     perror("sendto() error");
             }

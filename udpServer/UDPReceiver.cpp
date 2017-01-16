@@ -1,11 +1,14 @@
 #include "UDPReceiver.h"
+#include "../Portocol/HeaderDef.h"
 
 int UDPReceiver::StartReceiver() {
     initUDPSocket();
 
-    printf("Waiting for udp data...");
+    printf("Udp started...");
 
     fd_set rs;
+    json_object *Jarray,*Jdata, *Jobj, *jobjX, *jobjY, *jobjZ;
+
     while (!exitRecvLoop) {
         fflush(stdout);
         FD_ZERO(&rs);
@@ -19,16 +22,18 @@ int UDPReceiver::StartReceiver() {
             //recive data non-bloking call
             recvfrom(_Socket, _Buffer, BUFLEN, MSG_DONTWAIT, (struct sockaddr *)&si_other, &slen);
 
-            json_object *jobj, *jobjX, *jobjY, *jobjZ;
-            jobj = json_tokener_parse(_Buffer);
-            json_object_object_get_ex(jobj,"x",&jobjX);
-            double coordX = json_object_get_double(jobjX);
-            json_object_object_get_ex(jobj,"y",&jobjY);
-            double coordY = json_object_get_double(jobjY);
-            json_object_object_get_ex(jobj,"z",&jobjZ);
-            double coordZ = json_object_get_double(jobjZ);
+            Jdata = json_tokener_parse(_Buffer);
+            json_object_object_get_ex(Jdata, J_VTWDATA, &Jarray);
+            Jobj = json_object_array_get_idx(Jarray, 0);
+            json_object_object_get_ex(Jobj, J_CODE_X, &jobjX);
+            Jobj = json_object_array_get_idx(Jarray, 1);
+            json_object_object_get_ex(Jobj, J_CODE_Y, &jobjY);
+            Jobj = json_object_array_get_idx(Jarray, 2);
+            json_object_object_get_ex(Jobj, J_CODE_Z, &jobjZ);
 
-            //move the device
+            double coordX = json_object_get_double(jobjX);
+            double coordY = json_object_get_double(jobjY);
+            double coordZ = json_object_get_double(jobjZ);
             module.input(CoordinatesXYZ((float)coordX, (float)coordY, (float)coordZ));
         }
     }

@@ -321,52 +321,76 @@ CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o.provides: CMakeFiles/VTW
 CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o
 
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o: ../startApp/Threads/UdpThreadCode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.cpp
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o: ../Threads/UdpThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.cpp
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.cpp > CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.i
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.cpp > CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.i
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/UdpThreadCode.cpp -o CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.s
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.cpp -o CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.s
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.requires:
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.requires:
 
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.requires
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.requires
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.provides.build
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.provides
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.provides
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o
+CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o
 
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o: ../startApp/Threads/ForkThread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.cpp
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o: ../Threads/ForkThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.cpp
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.cpp > CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.i
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.cpp > CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.i
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/Threads/ForkThread.cpp -o CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.s
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.cpp -o CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.s
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.requires:
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.requires:
 
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.requires
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.requires
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.requires
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.provides.build
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.provides
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.provides
 
-CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o
+CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o
+
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o: ../tcpServer/TcpThread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp > CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.i
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.s
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.requires:
+
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.requires
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.provides
+
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
 
 
 # Object files for target VTW_Server_Linux
@@ -382,8 +406,9 @@ VTW_Server_Linux_OBJECTS = \
 "CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o" \
-"CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o" \
-"CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o"
+"CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o"
 
 # External object files for target VTW_Server_Linux
 VTW_Server_Linux_EXTERNAL_OBJECTS =
@@ -399,15 +424,16 @@ VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o
-VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o
-VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/build.make
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libSM.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libICE.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libX11.so
 VTW_Server_Linux: /usr/lib/x86_64-linux-gnu/libXext.so
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable VTW_Server_Linux"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable VTW_Server_Linux"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VTW_Server_Linux.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -426,8 +452,9 @@ CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseC
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o.requires
-CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/UdpThreadCode.cpp.o.requires
-CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/startApp/Threads/ForkThread.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o.requires
 
 .PHONY : CMakeFiles/VTW_Server_Linux.dir/requires
 
