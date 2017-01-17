@@ -22,7 +22,7 @@ set(SOURCE_FILES
         mouseController/stdafx.cpp
         mouseController/stdafx.h
         mouseController/translate.cpp
-        mouseController/translate.h tcpServer/JsonHandler.cpp tcpServer/JsonHandler.h Portocol/HeaderDef.h tcpServer/tcpServer.cpp tcpServer/tcpServer.h startApp/startApp.cpp startApp/startApp.h Threads/Thread.h Threads/UdpThread.cpp Threads/UdpThread.h Threads/ForkThread.cpp Threads/ForkThread.h tcpServer/TcpThread.cpp tcpServer/TcpThread.h)
+        mouseController/translate.h tcpServer/JsonHandler.cpp tcpServer/JsonHandler.h Portocol/HeaderDef.h tcpServer/tcpServer.cpp tcpServer/tcpServer.h startApp/startApp.cpp startApp/startApp.h Threads/Thread.h Threads/UdpThread.cpp Threads/UdpThread.h Threads/ForkThread.cpp Threads/ForkThread.h Threads/TcpThread.cpp Threads/TcpThread.h)
 
 add_executable(VTW_Server_Linux ${SOURCE_FILES})
 

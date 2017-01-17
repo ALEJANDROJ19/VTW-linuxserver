@@ -176,3 +176,27 @@ char* tcpServer::cleanBuffer(char* buffer){
     array[c] = '\0';
     return array;
 }
+
+int tcpServer::Stop() {
+    return 0;
+}
+
+void tcpServer::SetStartAppCallback(int (*StartAppCallback)(int)) {
+    callBacks.StartAppCallback = StartAppCallback;
+}
+
+void tcpServer::SetStopAppCallback(int (*StopAppCallback)(int)) {
+    callBacks.StopAppCallback = StopAppCallback;
+}
+
+void tcpServer::SetgetAppListCallback(char *(*getAppList)()) {
+    callBacks.getAppList = getAppList;
+}
+
+void tcpServer::SetupdateAppListCallback(char *(*updateAppList)(char *)) {
+    callBacks.updateAppList = updateAppList;
+}
+
+void tcpServer::SetgetAppThumbCallback(char *(*getAppThumb)()) {
+    callBacks.getAppThumb = getAppThumb;
+}

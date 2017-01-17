@@ -177,6 +177,33 @@ Threads/ForkThread.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.s
 .PHONY : Threads/ForkThread.cpp.s
 
+Threads/TcpThread.o: Threads/TcpThread.cpp.o
+
+.PHONY : Threads/TcpThread.o
+
+# target to build an object file
+Threads/TcpThread.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/TcpThread.cpp.o
+.PHONY : Threads/TcpThread.cpp.o
+
+Threads/TcpThread.i: Threads/TcpThread.cpp.i
+
+.PHONY : Threads/TcpThread.i
+
+# target to preprocess a source file
+Threads/TcpThread.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/TcpThread.cpp.i
+.PHONY : Threads/TcpThread.cpp.i
+
+Threads/TcpThread.s: Threads/TcpThread.cpp.s
+
+.PHONY : Threads/TcpThread.s
+
+# target to generate assembly for a file
+Threads/TcpThread.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/Threads/TcpThread.cpp.s
+.PHONY : Threads/TcpThread.cpp.s
+
 Threads/UdpThread.o: Threads/UdpThread.cpp.o
 
 .PHONY : Threads/UdpThread.o
@@ -420,33 +447,6 @@ tcpServer/JsonHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s
 .PHONY : tcpServer/JsonHandler.cpp.s
 
-tcpServer/TcpThread.o: tcpServer/TcpThread.cpp.o
-
-.PHONY : tcpServer/TcpThread.o
-
-# target to build an object file
-tcpServer/TcpThread.cpp.o:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
-.PHONY : tcpServer/TcpThread.cpp.o
-
-tcpServer/TcpThread.i: tcpServer/TcpThread.cpp.i
-
-.PHONY : tcpServer/TcpThread.i
-
-# target to preprocess a source file
-tcpServer/TcpThread.cpp.i:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.i
-.PHONY : tcpServer/TcpThread.cpp.i
-
-tcpServer/TcpThread.s: tcpServer/TcpThread.cpp.s
-
-.PHONY : tcpServer/TcpThread.s
-
-# target to generate assembly for a file
-tcpServer/TcpThread.cpp.s:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.s
-.PHONY : tcpServer/TcpThread.cpp.s
-
 tcpServer/tcpServer.o: tcpServer/tcpServer.cpp.o
 
 .PHONY : tcpServer/tcpServer.o
@@ -516,6 +516,9 @@ help:
 	@echo "... Threads/ForkThread.o"
 	@echo "... Threads/ForkThread.i"
 	@echo "... Threads/ForkThread.s"
+	@echo "... Threads/TcpThread.o"
+	@echo "... Threads/TcpThread.i"
+	@echo "... Threads/TcpThread.s"
 	@echo "... Threads/UdpThread.o"
 	@echo "... Threads/UdpThread.i"
 	@echo "... Threads/UdpThread.s"
@@ -543,9 +546,6 @@ help:
 	@echo "... tcpServer/JsonHandler.o"
 	@echo "... tcpServer/JsonHandler.i"
 	@echo "... tcpServer/JsonHandler.s"
-	@echo "... tcpServer/TcpThread.o"
-	@echo "... tcpServer/TcpThread.i"
-	@echo "... tcpServer/TcpThread.s"
 	@echo "... tcpServer/tcpServer.o"
 	@echo "... tcpServer/tcpServer.i"
 	@echo "... tcpServer/tcpServer.s"

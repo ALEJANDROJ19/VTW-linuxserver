@@ -96,6 +96,12 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.cpp">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
@@ -151,12 +157,6 @@
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp">
-			<Option target="VTW_Server_Linux"/>
-		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp">

@@ -3,7 +3,7 @@
 #include "Thread.h"
 #include "../udpServer/UDPReceiver.h"
 
-class UdpThreadCode : public Thread {
+class UdpThread : public Thread {
 
 public:
     virtual void ThreadCode();

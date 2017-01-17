@@ -1,9 +1,9 @@
 #include "UdpThread.h"
 
-void UdpThreadCode::ThreadCode() {
+void UdpThread::ThreadCode() {
     UdpReceiver.StartReceiver();
 }
 
-void UdpThreadCode::StopReceiver() {
+void UdpThread::StopReceiver() {
     UdpReceiver.StopReceiver();
 }

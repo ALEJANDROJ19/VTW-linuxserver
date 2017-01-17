@@ -12,14 +12,11 @@ class startApp {
 public:
     int start(int);
     int stop(int);
-    char* getAppList();
-    char* updateAppList(char[]);
-    char* getAppThumb();
 
 private:
     bool status = false;
     ForkThread forkThread;
-    UdpThreadCode udpThreadCode;
+    UdpThread udpThread;
 };
 
 

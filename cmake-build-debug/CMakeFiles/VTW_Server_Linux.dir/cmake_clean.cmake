@@ -12,7 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o"
   "CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o"
   "CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o"
-  "CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o"
+  "CMakeFiles/VTW_Server_Linux.dir/Threads/TcpThread.cpp.o"
   "VTW_Server_Linux.pdb"
   "VTW_Server_Linux"
 )
