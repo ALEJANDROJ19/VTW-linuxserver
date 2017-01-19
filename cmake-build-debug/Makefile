@@ -447,32 +447,32 @@ tcpServer/JsonHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.s
 .PHONY : tcpServer/JsonHandler.cpp.s
 
-tcpServer/tcpServer.o: tcpServer/tcpServer.cpp.o
+tcpServer/TcpServer.o: tcpServer/TcpServer.cpp.o
 
-.PHONY : tcpServer/tcpServer.o
+.PHONY : tcpServer/TcpServer.o
 
 # target to build an object file
-tcpServer/tcpServer.cpp.o:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
-.PHONY : tcpServer/tcpServer.cpp.o
+tcpServer/TcpServer.cpp.o:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o
+.PHONY : tcpServer/TcpServer.cpp.o
 
-tcpServer/tcpServer.i: tcpServer/tcpServer.cpp.i
+tcpServer/TcpServer.i: tcpServer/TcpServer.cpp.i
 
-.PHONY : tcpServer/tcpServer.i
+.PHONY : tcpServer/TcpServer.i
 
 # target to preprocess a source file
-tcpServer/tcpServer.cpp.i:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i
-.PHONY : tcpServer/tcpServer.cpp.i
+tcpServer/TcpServer.cpp.i:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.i
+.PHONY : tcpServer/TcpServer.cpp.i
 
-tcpServer/tcpServer.s: tcpServer/tcpServer.cpp.s
+tcpServer/TcpServer.s: tcpServer/TcpServer.cpp.s
 
-.PHONY : tcpServer/tcpServer.s
+.PHONY : tcpServer/TcpServer.s
 
 # target to generate assembly for a file
-tcpServer/tcpServer.cpp.s:
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s
-.PHONY : tcpServer/tcpServer.cpp.s
+tcpServer/TcpServer.cpp.s:
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.s
+.PHONY : tcpServer/TcpServer.cpp.s
 
 udpServer/UDPReceiver.o: udpServer/UDPReceiver.cpp.o
 
@@ -546,9 +546,9 @@ help:
 	@echo "... tcpServer/JsonHandler.o"
 	@echo "... tcpServer/JsonHandler.i"
 	@echo "... tcpServer/JsonHandler.s"
-	@echo "... tcpServer/tcpServer.o"
-	@echo "... tcpServer/tcpServer.i"
-	@echo "... tcpServer/tcpServer.s"
+	@echo "... tcpServer/TcpServer.o"
+	@echo "... tcpServer/TcpServer.i"
+	@echo "... tcpServer/TcpServer.s"
 	@echo "... udpServer/UDPReceiver.o"
 	@echo "... udpServer/UDPReceiver.i"
 	@echo "... udpServer/UDPReceiver.s"

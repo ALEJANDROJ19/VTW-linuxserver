@@ -1,6 +1,6 @@
-#include "tcpServer/tcpServer.h"
+#include "tcpServer/TcpServer.h"
 
 int main(void) {
-    tcpServer tcpServer;
+    TcpServer tcpServer;
     tcpServer.createTCPServer();
 }

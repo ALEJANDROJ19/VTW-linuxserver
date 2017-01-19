@@ -69,11 +69,11 @@ json_object *JsonHandler::create4AppResponse(int code, char str[]) {
     char* app_thumb;
 
     if(code){
-        app_list = app.getAppList();
+        app_list = callBacks.getAppList();
     } else {
-        app_list = app.updateAppList(str);
+        app_list = callBacks.updateAppList(str);
     }
-    app_thumb = app.getAppThumb();
+    app_thumb = callBacks.getAppThumb();
 
     json_object *jarray = json_object_new_array();
     if(str != nullptr) {
@@ -121,6 +121,8 @@ json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
         if(app.stop(app_id) == 1)
             return create7Error((char*)ERROR_NOAPPRUNNING,NULL);
         else{
+            callBacks.StopAppCallback(app_id);
+
             json_object *jcode = json_object_new_string(J_CODE_STOP);
             json_object *jobjcode = json_object_new_object();
             json_object_object_add(jobjcode, J_RESPONSE, jcode);
@@ -142,6 +144,7 @@ json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
     if(app.start(app_id) == 1)
         return create7Error((char*)ERROR_APPRUNNING,NULL);
 
+    callBacks.StartAppCallback(app_id);
     //todo get the port '_PORT' def is 8090
     //todo get the data uri '_URI' def is test1.webm
 
@@ -197,4 +200,8 @@ json_object *JsonHandler::create7Error(char* code, json_object *obj) {
 
 void JsonHandler::setIP(char *ip) {
     _IP = ip;
+}
+
+void JsonHandler::setCallbacks(Callbacks::CallBacks callBacks) {
+    this->callBacks = callBacks;
 }

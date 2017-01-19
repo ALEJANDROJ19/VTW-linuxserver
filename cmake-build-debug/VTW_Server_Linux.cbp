@@ -153,16 +153,19 @@
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h">
+			<Option target="VTW_Server_Linux"/>
+		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp">
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
-		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h">
+		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h">
 			<Option target="VTW_Server_Linux"/>
 		</Unit>
 		<Unit filename="/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.cpp">

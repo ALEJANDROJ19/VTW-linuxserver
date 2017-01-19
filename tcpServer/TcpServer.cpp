@@ -1,11 +1,11 @@
-#include "tcpServer.h"
+#include "TcpServer.h"
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wmissing-noreturn"
-int tcpServer::createTCPServer() {
+int TcpServer::createTCPServer() {
     _IP = getIpAddress();
     jsonHandler = JsonHandler();
+    jsonHandler.setCallbacks(callBacks);
     jsonHandler.setIP(_IP);
+    exitRecvLoop = false;
     if ((_Socket = socket(AF_INET , SOCK_STREAM , 0)) == -1)
         ext((char *)"socket");
     memset((char *)&server, 0, sizeof(server));
@@ -15,72 +15,80 @@ int tcpServer::createTCPServer() {
 
     if (bind(_Socket, (struct sockaddr *)&server , sizeof(server)) < 0)
         ext((char *)"connect");
-
+    listen(_Socket,5);
     checkandSetKeepAlive();
 
     int clientfd;
     struct sockaddr_in cli_addr;
     ssize_t n;
     socklen_t client = sizeof(cli_addr);
+    fd_set rs;
 
-    while (true) {
-        //accept connections - bloking call
-        listen(_Socket,5);
-        clientfd = accept(_Socket, (struct sockaddr *) &cli_addr, &client);
+    while (!exitRecvLoop) {
+        FD_ZERO(&rs);
+        FD_SET(_Socket, &rs);
 
-        if (clientfd < 0)
-            ext((char *)"accept");
+        timeval timeout = {0, 1000};
+        if (select(_Socket, &rs, NULL, NULL, &timeout) < 0)
+            ext((char *) "accept");
 
-        //read from the soket
-        bzero(_Buffer,BUFFLEN);
-        n = read(clientfd, _Buffer, BUFFLEN);
 
-        if (n < 0) { ext((char *)"socket read"); }
+        if (FD_ISSET(_Socket, &rs)) {
+            clientfd = accept(_Socket, (struct sockaddr *) &cli_addr, &client);
 
-        //if we got a post message clean the buffer
-        if (strstr (_Buffer,"POST")) {
-            json_object *jobj, *jobjres;
-            char array[BUFFLEN];
-            int i = 0;
-            while(_Buffer[i] != '{') {
-                i++;
+
+            //read from the soket
+            bzero(_Buffer, BUFFLEN);
+            n = read(clientfd, _Buffer, BUFFLEN);
+
+            if (n < 0) { ext((char *) "socket read"); }
+
+            //if we got a post message clean the buffer
+            if (strstr(_Buffer, "POST")) {
+                json_object *jobj, *jobjres;
+                char array[BUFFLEN];
+                int i = 0;
+                while (_Buffer[i] != '{') {
+                    i++;
+                }
+                int c = 0;
+                while (i < BUFFLEN) {
+                    array[c] = _Buffer[i];
+                    i++;
+                    c++;
+                }
+                array[c] = '\0';
+
+                char sourceIP[INET_ADDRSTRLEN];
+                inet_ntop(AF_INET, &(cli_addr.sin_addr), sourceIP, INET_ADDRSTRLEN);
+                printf("\n ### new connection from: %s\n", sourceIP);
+                printf("### Request:\n%s\n", array);
+
+                jobj = json_tokener_parse(array);
+                json_object_object_get_ex(jobj, J_VTWCONTROL, &jobjres);
+                char tmpBuffer[BUFFLEN];
+
+                //parse new message and get response
+                if (jobjres != nullptr) {
+                    receivedNewMessage(jobjres, *tmpBuffer);
+                    printf("### Response:\n%s\n", tmpBuffer);
+                    if ((write(clientfd, tmpBuffer, strlen(tmpBuffer))) < 0)
+                        perror("sendto() error");
+                }
             }
-            int c = 0;
-            while(i < BUFFLEN) {
-                array[c] = _Buffer[i];
-                i++;
-                c++;
-            }
-            array[c] = '\0';
-
-            char sourceIP[INET_ADDRSTRLEN];
-            inet_ntop(AF_INET, &(cli_addr.sin_addr), sourceIP, INET_ADDRSTRLEN);
-            printf("\n ### new connection from: %s\n", sourceIP);
-            printf("### Request:\n%s\n", array);
-
-            jobj = json_tokener_parse(array);
-            json_object_object_get_ex(jobj, J_VTWCONTROL, &jobjres);
-            char tmpBuffer[BUFFLEN];
-
-            //parse new message and get response
-            if(jobjres != nullptr) {
-                receivedNewMessage(jobjres, *tmpBuffer);
-                printf("### Response:\n%s\n", tmpBuffer);
-                if ((write(clientfd, tmpBuffer, strlen(tmpBuffer))) < 0)
-                    perror("sendto() error");
-            }
+            //close the connection
+            if (shutdown(clientfd, SHUT_RDWR) < 0)
+                if (errno != ENOTCONN && errno != EINVAL)
+                    perror("shutdown");
+            if (close(clientfd) < 0)
+                perror("close");
         }
-        //close the connection
-        if (shutdown(clientfd, SHUT_RDWR) < 0) // terminate the 'reliable' delivery
-            if (errno != ENOTCONN && errno != EINVAL) // SGI causes EINVAL
-                perror("shutdown");
-        if (close(clientfd) < 0) // finally call close()
-            perror("close");
     }
+    close(_Socket);
+    return 0;
 }
-#pragma clang diagnostic pop
 
-void tcpServer::receivedNewMessage(json_object *jobj, char &buffer) {
+void TcpServer::receivedNewMessage(json_object *jobj, char &buffer) {
     bzero(&buffer, BUFFLEN);
     char* ok_response = new char[248];
     sprintf(ok_response, "HTTP/1.0 200 OK\n"
@@ -100,7 +108,7 @@ void tcpServer::receivedNewMessage(json_object *jobj, char &buffer) {
     // todo else create json error and remove the calling non null on json
 }
 
-void tcpServer::checkandSetKeepAlive(){
+void TcpServer::checkandSetKeepAlive(){
     /* Check the status for the keepalive option */
     int optval;
     socklen_t optlen = sizeof(optval);
@@ -133,12 +141,12 @@ void tcpServer::checkandSetKeepAlive(){
     printf("SO_KEEPALIVE is %s\n", (optval ? "ON" : "OFF"));
 }
 
-void tcpServer::ext(char *s) {
+void TcpServer::ext(char *s) {
     perror(s);
     exit(1);
 }
 
-char* tcpServer::getIpAddress() {
+char* TcpServer::getIpAddress() {
     char* addressBuffer = (char*) malloc(INET_ADDRSTRLEN);
     struct ifaddrs * ifAddrStruct=NULL;
     struct ifaddrs * ifa=NULL;
@@ -161,7 +169,7 @@ char* tcpServer::getIpAddress() {
     return nullptr;
 }
 
-char* tcpServer::cleanBuffer(char* buffer){
+char* TcpServer::cleanBuffer(char* buffer){
     char *array = new char[BUFFLEN];
     int i = 0;
     while(buffer[i] != '{') {
@@ -177,26 +185,26 @@ char* tcpServer::cleanBuffer(char* buffer){
     return array;
 }
 
-int tcpServer::Stop() {
+int TcpServer::Stop() {
     return 0;
 }
 
-void tcpServer::SetStartAppCallback(int (*StartAppCallback)(int)) {
+void TcpServer::SetStartAppCallback(int (*StartAppCallback)(int)) {
     callBacks.StartAppCallback = StartAppCallback;
 }
 
-void tcpServer::SetStopAppCallback(int (*StopAppCallback)(int)) {
+void TcpServer::SetStopAppCallback(int (*StopAppCallback)(int)) {
     callBacks.StopAppCallback = StopAppCallback;
 }
 
-void tcpServer::SetgetAppListCallback(char *(*getAppList)()) {
+void TcpServer::SetgetAppListCallback(char *(*getAppList)()) {
     callBacks.getAppList = getAppList;
 }
 
-void tcpServer::SetupdateAppListCallback(char *(*updateAppList)(char *)) {
+void TcpServer::SetupdateAppListCallback(char *(*updateAppList)(char *)) {
     callBacks.updateAppList = updateAppList;
 }
 
-void tcpServer::SetgetAppThumbCallback(char *(*getAppThumb)()) {
+void TcpServer::SetgetAppThumbCallback(char *(*getAppThumb)()) {
     callBacks.getAppThumb = getAppThumb;
 }

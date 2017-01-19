@@ -3,7 +3,7 @@
 
 
 #include "Thread.h"
-#include "../tcpServer/tcpServer.h"
+#include "../tcpServer/TcpServer.h"
 
 class TcpThread : public Thread {
 
@@ -18,7 +18,7 @@ public:
     void SetgetAppThumbCallback(char*(*getAppThumb)());
 
 private:
-    tcpServer tcpServerInstance;
+    TcpServer tcpServerInstance;
 };
 
 

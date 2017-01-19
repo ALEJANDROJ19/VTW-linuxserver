@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/MainCore.cpp
-tcpServer/tcpServer.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
+tcpServer/TcpServer.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
 
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
 
@@ -31,6 +31,16 @@ ForkThread.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
 Thread.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
+
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.cpp
+TcpThread.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.h
+
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.h
+Thread.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
+../tcpServer/TcpServer.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
 
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
 pthread.h
@@ -134,6 +144,8 @@ unistd.h
 ../Threads/ForkThread.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
 
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
+
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp
 JsonHandler.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
@@ -151,26 +163,18 @@ cstring
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
 ../startApp/startApp.h
 /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+Callbacks.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
 stdio.h
 -
 stdlib.h
 -
 
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp
-TcpThread.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp
+TcpServer.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
 
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.h
-../Threads/Thread.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
-../tcpServer/tcpServer.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
-
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp
-tcpServer.h
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
-
-/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
+/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
 stdlib.h
 -
 ../Portocol/HeaderDef.h

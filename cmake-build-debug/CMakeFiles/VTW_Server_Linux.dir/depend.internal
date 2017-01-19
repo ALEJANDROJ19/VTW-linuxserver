@@ -14,13 +14,32 @@ CMakeFiles/VTW_Server_Linux.dir/MainCore.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.cpp
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
+CMakeFiles/VTW_Server_Linux.dir/Threads/TcpThread.cpp.o
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.cpp
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/TcpThread.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controller.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.cpp
@@ -105,10 +124,11 @@ CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.cpp
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
@@ -120,26 +140,10 @@ CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpThread.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/Callbacks.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.cpp
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpThread.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Portocol/HeaderDef.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/ForkThread.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/Thread.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/Threads/UdpThread.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXYZ.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controller.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/controlmodule.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/stdafx.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/translate.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/startApp/startApp.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/JsonHandler.h
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp
- /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.h
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp
+ /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.h
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/udpServer/UDPReceiver.h
 CMakeFiles/VTW_Server_Linux.dir/udpServer/UDPReceiver.cpp.o
  /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/mouseController/CoordinatesXY.h

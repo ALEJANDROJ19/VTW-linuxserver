@@ -273,28 +273,28 @@ CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides: CMakeFiles
 CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
 
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o: ../tcpServer/tcpServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o: ../tcpServer/TcpServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o -c /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp > CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.i
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp > CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.i
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/tcpServer.cpp -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.s
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/tcpServer/TcpServer.cpp -o CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.s
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires:
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.requires:
 
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.requires
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides.build
-.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.provides: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/VTW_Server_Linux.dir/build.make CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.provides.build
+.PHONY : CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.provides
 
-CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
+CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.provides.build: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o
 
 
 CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o: CMakeFiles/VTW_Server_Linux.dir/flags.make
@@ -404,7 +404,7 @@ VTW_Server_Linux_OBJECTS = \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o" \
-"CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o" \
+"CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o" \
 "CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o" \
@@ -422,7 +422,7 @@ VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/controller.cpp
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o
-VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o
+VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o
 VTW_Server_Linux: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o
@@ -450,7 +450,7 @@ CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseC
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/stdafx.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/mouseController/translate.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/JsonHandler.cpp.o.requires
-CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/tcpServer.cpp.o.requires
+CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/tcpServer/TcpServer.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/startApp/startApp.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/Threads/UdpThread.cpp.o.requires
 CMakeFiles/VTW_Server_Linux.dir/requires: CMakeFiles/VTW_Server_Linux.dir/Threads/ForkThread.cpp.o.requires
