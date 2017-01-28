@@ -1,4 +1,10 @@
 /home/pau/Documents/JetBrains/clion-2016.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver
--- Configuring done
--- Generating done
--- Build files have been written to: /home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug
+CMake Error at /home/pau/Documents/JetBrains/clion-2016.2.3/bin/cmake/share/cmake-3.6/Modules/FindQt4.cmake:1328 (message):
+  Found unsuitable Qt version "5.5.1" from /usr/bin/qmake, this code requires
+  Qt 4.x
+Call Stack (most recent call first):
+  CMakeLists.txt:7 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/pau/Git/VTWserverLinuxMaster/VTW-linuxserver/cmake-build-debug/CMakeFiles/CMakeOutput.log".

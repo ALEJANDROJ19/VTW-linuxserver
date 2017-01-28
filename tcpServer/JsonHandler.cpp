@@ -9,7 +9,7 @@ const char* JsonHandler::handleJsonData(json_object * jsonObject) {
     const char* eval = json_object_get_string(object);
 
     if(strcmp(eval,J_CODE_DISCOVERY) == 0) {
-        return json_object_get_string(create2BroadcastResponseOk((char*)"0.0.0.0", (char*)"21211"));
+        return json_object_get_string(create2BroadcastResponseOk(_IP, (char*)"21211"));
     }
     else if (strcmp(eval,J_CODE_REQUESTAPP) == 0) {
         return json_object_get_string(create4AppResponse(1, nullptr));
@@ -69,11 +69,11 @@ json_object *JsonHandler::create4AppResponse(int code, char str[]) {
     char* app_thumb;
 
     if(code){
-        app_list = callBacks.getAppList();
+//        app_list = callBacks.getAppList();
     } else {
-        app_list = callBacks.updateAppList(str);
+//        app_list = callBacks.updateAppList(str);
     }
-    app_thumb = callBacks.getAppThumb();
+//    app_thumb = callBacks.getAppThumb();
 
     json_object *jarray = json_object_new_array();
     if(str != nullptr) {
@@ -121,7 +121,7 @@ json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
         if(app.stop(app_id) == 1)
             return create7Error((char*)ERROR_NOAPPRUNNING,NULL);
         else{
-            callBacks.StopAppCallback(app_id);
+//            callBacks.StopAppCallback(app_id);
 
             json_object *jcode = json_object_new_string(J_CODE_STOP);
             json_object *jobjcode = json_object_new_object();
@@ -144,7 +144,7 @@ json_object *JsonHandler::create6StartStopResponse(int code, int app_id) {
     if(app.start(app_id) == 1)
         return create7Error((char*)ERROR_APPRUNNING,NULL);
 
-    callBacks.StartAppCallback(app_id);
+//    callBacks.StartAppCallback(app_id);
     //todo get the port '_PORT' def is 8090
     //todo get the data uri '_URI' def is test1.webm
 
@@ -204,4 +204,8 @@ void JsonHandler::setIP(char *ip) {
 
 void JsonHandler::setCallbacks(Callbacks::CallBacks callBacks) {
     this->callBacks = callBacks;
+}
+
+void JsonHandler::StopThreads() {
+    app.stop(0);
 }

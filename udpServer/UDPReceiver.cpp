@@ -20,7 +20,7 @@ int UDPReceiver::StartReceiver() {
             ext((char *)"recvfrom()");
         if (FD_ISSET(_Socket, &rs)) {
             //recive data non-bloking call
-            recvfrom(_Socket, _Buffer, BUFLEN, MSG_DONTWAIT, (struct sockaddr *)&si_other, &slen);
+            recvfrom(_Socket + 1, _Buffer, BUFLEN, MSG_DONTWAIT, (struct sockaddr *)&si_other, &slen);
 
             Jdata = json_tokener_parse(_Buffer);
             json_object_object_get_ex(Jdata, J_VTWDATA, &Jarray);

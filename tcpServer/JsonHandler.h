@@ -16,6 +16,7 @@ class JsonHandler {
 public:
     void setIP(char*);
     void setCallbacks(Callbacks::CallBacks);
+    void StopThreads();
     const char* handleJsonData(json_object*);
     json_object* create2BroadcastResponseOk(char* ip, char* port);
     json_object* create4AppResponse(int code, char[]);

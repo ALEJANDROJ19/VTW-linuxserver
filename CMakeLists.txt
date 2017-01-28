@@ -4,6 +4,7 @@ project(VTW_Server_Linux)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 
 find_package(X11 REQUIRED)
+find_package(Qt4 4.4.3 REQUIRED QtGui QtXml)
 link_libraries(${X11_LIBRARIES})
 include_directories(${X11_INCLUDE_DIR})
 
@@ -26,6 +27,5 @@ set(SOURCE_FILES
 
 add_executable(VTW_Server_Linux ${SOURCE_FILES})
 
-TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c)
-
+TARGET_LINK_LIBRARIES(VTW_Server_Linux json-c Qt4::QtGui Qt4::QtXml)
 

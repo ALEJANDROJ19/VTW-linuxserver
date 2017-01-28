@@ -15,9 +15,8 @@ int TcpServer::createTCPServer() {
 
     if (bind(_Socket, (struct sockaddr *)&server , sizeof(server)) < 0)
         ext((char *)"connect");
-    listen(_Socket,5);
     checkandSetKeepAlive();
-
+    listen(_Socket,5);
     int clientfd;
     struct sockaddr_in cli_addr;
     ssize_t n;
@@ -25,11 +24,13 @@ int TcpServer::createTCPServer() {
     fd_set rs;
 
     while (!exitRecvLoop) {
+
+
         FD_ZERO(&rs);
         FD_SET(_Socket, &rs);
 
         timeval timeout = {0, 1000};
-        if (select(_Socket, &rs, NULL, NULL, &timeout) < 0)
+        if (select(_Socket + 1, &rs, NULL, NULL, &timeout) < 0)
             ext((char *) "accept");
 
 
@@ -113,7 +114,6 @@ void TcpServer::checkandSetKeepAlive(){
     int optval;
     socklen_t optlen = sizeof(optval);
     optval = 1;
-    optlen = sizeof(optval);
     if(getsockopt(_Socket, SOL_SOCKET, SO_KEEPALIVE, &optval, &optlen) < 0) {
         perror("getsockopt()");
         close(_Socket);
@@ -186,6 +186,8 @@ char* TcpServer::cleanBuffer(char* buffer){
 }
 
 int TcpServer::Stop() {
+    jsonHandler.StopThreads();
+    exitRecvLoop = true;
     return 0;
 }
 
