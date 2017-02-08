@@ -65,8 +65,8 @@ json_object* JsonHandler::create2BroadcastResponseOk(char* ip, char* port) {
 
 json_object *JsonHandler::create4AppResponse(int code, char str[]) {
     int max_size = 100;
-    char* app_list;
-    char* app_thumb;
+    char *app_list;
+    char *app_thumb;
 
     if(code){
 //        app_list = callBacks.getAppList();

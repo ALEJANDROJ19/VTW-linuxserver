@@ -24,8 +24,6 @@ int TcpServer::createTCPServer() {
     fd_set rs;
 
     while (!exitRecvLoop) {
-
-
         FD_ZERO(&rs);
         FD_SET(_Socket, &rs);
 
@@ -33,10 +31,8 @@ int TcpServer::createTCPServer() {
         if (select(_Socket + 1, &rs, NULL, NULL, &timeout) < 0)
             ext((char *) "accept");
 
-
         if (FD_ISSET(_Socket, &rs)) {
             clientfd = accept(_Socket, (struct sockaddr *) &cli_addr, &client);
-
 
             //read from the soket
             bzero(_Buffer, BUFFLEN);

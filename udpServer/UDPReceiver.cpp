@@ -3,9 +3,9 @@
 
 int UDPReceiver::StartReceiver() {
     initUDPSocket();
-
-    printf("Udp started...");
-
+    controlmodule module;
+    printf("Udp started...\n");
+    ssize_t n;
     fd_set rs;
     json_object *Jarray,*Jdata, *Jobj, *jobjX, *jobjY, *jobjZ;
 
@@ -16,29 +16,34 @@ int UDPReceiver::StartReceiver() {
 
         // 1 milli
         timeval timeout = { 0, 1000 };
-        if (select(_Socket, &rs, NULL, NULL, &timeout) < 0)
+        if (select(_Socket + 1, &rs, NULL, NULL, &timeout) < 0)
             ext((char *)"recvfrom()");
         if (FD_ISSET(_Socket, &rs)) {
             //recive data non-bloking call
-            recvfrom(_Socket + 1, _Buffer, BUFLEN, MSG_DONTWAIT, (struct sockaddr *)&si_other, &slen);
-
+            n = recvfrom(_Socket, _Buffer, BUFLEN, 0, (struct sockaddr *)&si_other, &slen);
+            if (n < 0) { ext((char *) "socket UDP recv"); }
             Jdata = json_tokener_parse(_Buffer);
-            json_object_object_get_ex(Jdata, J_VTWDATA, &Jarray);
-            Jobj = json_object_array_get_idx(Jarray, 0);
-            json_object_object_get_ex(Jobj, J_CODE_X, &jobjX);
-            Jobj = json_object_array_get_idx(Jarray, 1);
-            json_object_object_get_ex(Jobj, J_CODE_Y, &jobjY);
-            Jobj = json_object_array_get_idx(Jarray, 2);
-            json_object_object_get_ex(Jobj, J_CODE_Z, &jobjZ);
-
-            double coordX = json_object_get_double(jobjX);
-            double coordY = json_object_get_double(jobjY);
-            double coordZ = json_object_get_double(jobjZ);
-            module.input(CoordinatesXYZ((float)coordX, (float)coordY, (float)coordZ));
+            if(Jdata != nullptr) {
+                json_object_object_get_ex(Jdata, J_VTWDATA, &Jarray);
+                if (Jarray != nullptr) {
+                    Jobj = json_object_array_get_idx(Jarray, 0);
+                    json_object_object_get_ex(Jobj, J_CODE_X, &jobjX);
+                    Jobj = json_object_array_get_idx(Jarray, 1);
+                    json_object_object_get_ex(Jobj, J_CODE_Y, &jobjY);
+                    Jobj = json_object_array_get_idx(Jarray, 2);
+                    json_object_object_get_ex(Jobj, J_CODE_Z, &jobjZ);
+                    if(jobjX != nullptr && jobjY != nullptr && jobjZ != nullptr) {
+                        double coordX = json_object_get_double(jobjX);
+                        double coordY = json_object_get_double(jobjY);
+                        double coordZ = json_object_get_double(jobjZ);
+                        module.input(CoordinatesXYZ((float) coordX, (float) coordY, (float) coordZ));
+                    }
+                }
+            }
         }
     }
     close(_Socket);
-    printf("Stopped udp...");
+    printf("Stopped udp...\n");
     return 0;
 }
 

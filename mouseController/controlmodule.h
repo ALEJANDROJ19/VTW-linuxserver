@@ -7,6 +7,7 @@ private:
 	controller* _contr;
 	CoordinatesXYZ _lastXYZ;
 	CoordinatesXY _lastXY;
+
     CoordinatesXY inicialitzaCoord();
 	
 

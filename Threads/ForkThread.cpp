@@ -34,6 +34,9 @@ void ForkThread::ThreadCode() {
 void ForkThread::ExecFfmpeg() {
     static char *argv[] = {
             (char *)"ffmpeg",
+            (char *)"-hide_banner",
+            (char *)"-loglevel",
+            (char *)"panic",
             (char *)"-f",
             (char *)"x11grab",
             (char *)"-r",

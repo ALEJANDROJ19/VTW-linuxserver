@@ -28,7 +28,6 @@ private:
     bool exitRecvLoop;
     struct sockaddr_in server, si_other;
     socklen_t slen;
-    controlmodule module = controlmodule();
 
 };
 

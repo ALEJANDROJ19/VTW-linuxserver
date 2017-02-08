@@ -46,5 +46,6 @@ CoordinatesXY controlmodule::inicialitzaCoord() {
     Screen* s = DefaultScreenOfDisplay(d);
     res.x = s->height;
     res.y = s->width;
+	res.x /= 2; res.y /= 2;
     return res;
 }
