@@ -64,23 +64,38 @@ json_object* JsonHandler::create2BroadcastResponseOk(char* ip, char* port) {
 }
 
 json_object *JsonHandler::create4AppResponse(int code, char str[]) {
-    int max_size = 100;
-    char *app_list;
-    char *app_thumb;
+    int max_size = 5;
+//    #####Hardcoded apps
+    char *app_list[] = {
+            (char *)"1",
+            (char *)"2",
+            (char *)"3",
+            (char *)"4",
+            (char *)"5"
+    };
 
-    if(code){
+    const char *app_thumb[] = {
+            (char *)"NULL",
+            (char *)"NULL",
+            (char *)"NULL",
+            (char *)"NULL",
+            (char *)"NULL"
+    };
+//    #####
+
+//    if(code){
 //        app_list = callBacks.getAppList();
-    } else {
+//    } else {
 //        app_list = callBacks.updateAppList(str);
-    }
+//    }
 //    app_thumb = callBacks.getAppThumb();
 
     json_object *jarray = json_object_new_array();
-    if(str != nullptr) {
+    if(jarray != nullptr) {
         int i = 0;
         while (i < max_size && app_list[i] != '\0') {
-            json_object *jstr = json_object_new_string(&app_list[i]);
-            json_object *jtumb = json_object_new_string(&app_thumb[i]);
+            json_object *jstr = json_object_new_string(&*app_list[i]);
+            json_object *jtumb = json_object_new_string(&*app_thumb[i]);
 
             json_object *jobjstr = json_object_new_object();
             json_object *jobjtumb = json_object_new_object();

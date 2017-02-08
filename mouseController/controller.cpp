@@ -53,27 +53,27 @@ controller::~controller(){
 //Operations
 void controller::move(const CoordinatesXY &coordXY){
 	//Move the mouse
-	printf("1\t\tex: %f ey: %f\n", coordXY.x, coordXY.y);
-	printf("1.1\t\tnx: %f ny: %f\n", this->_last_pos.x, this->_last_pos.y);
+//	printf("1\t\tex: %f ey: %f\n", coordXY.x, coordXY.y);
+//	printf("1.1\t\tnx: %f ny: %f\n", this->_last_pos.x, this->_last_pos.y);
 
-	XWarpPointer(dpy, None, root_window, 0, 0, 0, 0,this->_last_pos.y + coordXY.y*5, this->_last_pos.x + coordXY.x*5);
-	printf("1.2\t\tnx: %f ny: %f\n", _last_pos.x, _last_pos.y);
+	XWarpPointer(dpy, None, root_window, 0, 0, 0, 0,this->_last_pos.y + coordXY.y, this->_last_pos.x + coordXY.x);
+//	printf("1.2\t\tnx: %f ny: %f\n", _last_pos.x, _last_pos.y);
 	XFlush(dpy);
 	
 	_last_pos.x += coordXY.x*-5;
 	_last_pos.y += coordXY.y*5;
-	printf("2\t\tnx: %f ny: %f\n", _last_pos.x, _last_pos.y);
+//	printf("2\t\tnx: %f ny: %f\n", _last_pos.x, _last_pos.y);
 }
 
 void controller::moveAbs(const CoordinatesXY &coordXY) {
 	//Move the mouse
 	XWarpPointer(dpy, None, root_window, 0, 0, 0, 0, coordXY.y, coordXY.x);
 	XFlush(dpy);
-	printf("\t\tex: %f ey: %f\n", coordXY.x, coordXY.y);
+//	printf("\t\tex: %f ey: %f\n", coordXY.x, coordXY.y);
 
 	this->_last_pos.x = (float) coordXY.x;
 	this->_last_pos.y = (float) coordXY.y;
-	printf("2\t\tnx: %f ny: %f\n", this->_last_pos.x, this->_last_pos.y);
+//	printf("2\t\tnx: %f ny: %f\n", this->_last_pos.x, this->_last_pos.y);
 
 
 

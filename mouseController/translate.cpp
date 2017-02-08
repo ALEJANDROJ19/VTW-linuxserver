@@ -18,9 +18,9 @@ translate::~translate(){}
 //Operations
 CoordinatesXY translate::trans(const CoordinatesXYZ &vec){
 	CoordinatesXY ret;
-	ret.x=vec.x;
-	ret.y=vec.y;
-						printf("x: %f y: %f \n",ret.x,ret.y);//DEBUG
+	ret.x=vec.y;
+	ret.y=vec.x;
+//	printf("x: %f y: %f \n",ret.x,ret.y);//DEBUG
 	return CoordinatesXY(ret);
 }
 

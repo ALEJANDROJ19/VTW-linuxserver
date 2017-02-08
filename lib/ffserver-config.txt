@@ -1,0 +1,29 @@
+<Stream test1.webm>
+Feed feed1.ffm
+Format webm
+NoAudio
+VideoCodec libvpx
+VideoSize 320x240
+VideoFrameRate 24
+AVOptionVideo flags +global_header
+AVOptionVideo cpu-used 3
+AVOptionVideo qmin 1
+AVOptionVideo qmax 31
+AVOptionVideo quality good
+PreRoll 0
+StartSendOnKey
+VideoBitRate 64
+</Stream>
+
+<Stream live.h264>
+Feed feed1.ffm
+Format rtp
+VideoCodec libx264
+VideoFrameRate 24
+VideoBitRate 100
+VideoSize 320x240
+AVPresetVideo default
+AVPresetVideo baseline
+AVOptionVideo flags +global_header
+NoAudio
+</Stream>

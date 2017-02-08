@@ -8,7 +8,7 @@ controlmodule::controlmodule() {
 	this->_lastXYZ = CoordinatesXYZ();
 
 	this->_contr->moveAbs(init);
-	printf("11\t\tnx: %f ny: %f\n", init.x, init.y);
+//	printf("11\t\tnx: %f ny: %f\n", init.x, init.y);
 
 }
 
